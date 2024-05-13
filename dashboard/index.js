@@ -41,15 +41,13 @@ parameterSelect.dimension(parameterDimension)
   .title(kv => kv.key)
   .valueAccessor(d => d.value.max)
   .group(parameterGroup)
-  .on('filtered', d => {
-    mapUtils.renderMap();
-  });
+  .on('filtered', _ => void mapUtils.renderMap());
 
 const maxValueByDatetimeRangeLineChart = dc.lineChart("#series-chart");
 maxValueByDatetimeRangeLineChart.dimension(localDateTimeDimension)
   .group(maxDateTimeValueGroup)
-  .keyAccessor(function (d) { return d.key; })
-  .valueAccessor(function (d) { return d.value.max; })
+  .keyAccessor(d => d.key)
+  .valueAccessor(d => d.value.max || 0)
   .width(800)
   .height(250)
   .clipPadding(20)
@@ -57,9 +55,7 @@ maxValueByDatetimeRangeLineChart.dimension(localDateTimeDimension)
   .elasticY(true)
   .elasticX(true)
   .x(d3.scaleTime().domain([new Date("2024-04-11"), new Date()]))
-  .on('filtered', d => {
-    mapUtils.renderMap();
-  })
+  .on('filtered', _ => void mapUtils.renderMap())
   .yAxisLabel('Concentration in "µg/m3"');
 maxValueByDatetimeRangeLineChart.yAxis().ticks(3);
 
@@ -68,7 +64,7 @@ maxValueByDateLineChart.dimension(localDateTimeDimension)
   .yAxisLabel('Concentration in "µg/m3"')
   .group(maxDateTimeValueGroup)
   .keyAccessor(function (d) { return d.key; })
-  .valueAccessor(function (d) { return d.value.max; })
+  .valueAccessor(function (d) { return d.value.max || 0; })
   .width(800)
   .brushOn(false)
   .height(500)
@@ -76,9 +72,7 @@ maxValueByDateLineChart.dimension(localDateTimeDimension)
   .clipPadding(20)
   .elasticY(true)
   .x(d3.scaleTime().domain([new Date("2024-04-11"), new Date()]))
-  .on('filtered', d => {
-    mapUtils.renderMap();
-  });
+  .on('filtered', _ => mapUtils.renderMap());
 
 const rowChart = dc.rowChart("#top-parameter");
 rowChart.width(500)
@@ -98,9 +92,8 @@ topLocationRowChart.width(500)
   .cap(10)
   .elasticX(true)
   .group(locationGroup)
-  .ordering(function (d) { return -d.value.max || 0 }).othersGrouper(null)
-
-// Map functions
+  .ordering(d=> -d.value.max || 0)
+  .othersGrouper(null)
 
 const mapUtils = {
   selectMarker: (latitude, longitude) => {
@@ -147,7 +140,6 @@ const mapUtils = {
                 dc.renderAll();
                 mapUtils.selectMarker(d.latlng.lat, d.latlng.lng);
               }
-
             })
             .bindPopup(entry.key);
       });
@@ -174,7 +166,6 @@ const init = () => {
   mapUtils.renderMap();
   dc.renderAll();
 }
-
 
 
 var map = L.map('map').setView([48.86211, 2.344615], 11);
