@@ -4,6 +4,20 @@ var cc = [
   '#a1d99b', '#c7e9c0', '#756bb1', '#9e9ac8', '#bcbddc',
   '#dadaeb', '#636363', '#969696', '#bdbdbd', '#d9d9d9'];
 
+const PARAMETERS_TITLES = {
+  "PM25": "Particulate matter smaller than 2.5 microns",
+  "PM10": "Particulate matter smaller than 10 microns",
+  "NO2": "Nitrogen Dioxide",
+  "O3": "Ozone",
+  "PM4": "Particulate matter smaller than 4 microns",
+  "NO": "Nitrogen Monoxide",
+  "CH4": "Methane",
+  "SO2": "Sulfur Dioxide",
+  "CO": "Carbon Monoxide",
+  "BC": "Black Carbon",
+}
+
+
 dc.config.defaultColors(cc)
 
 var experiments = d3.csvParse(d3.select('pre#data').text());
@@ -38,7 +52,7 @@ reductio()
 
 const parameterSelect = new dc.SelectMenu('#parameter-selector');
 parameterSelect.dimension(parameterDimension)
-  .title(kv => kv.key)
+  .title(kv => kv.key + ': ' + PARAMETERS_TITLES[kv.key])
   .valueAccessor(d => d.value.max)
   .group(parameterGroup)
   .on('filtered', _ => void mapUtils.renderMap());
@@ -130,6 +144,8 @@ const mapUtils = {
             .setOpacity(selectedMarker ?
               (mapUtils.isSelectedMarker(element.lat, element.lng) ? 1 : 0.6) : 1)
             .addTo(map)
+            .on('mouseover', (ev) => void ev.target.openPopup())
+            .on('mouseout', (ev) => void ev.target.closePopup())
             .on('click', d => {
               if (mapUtils.isSelectedMarker(d.latlng.lat, d.latlng.lng)) {
                 mapUtils.clearMarkerSelection();
