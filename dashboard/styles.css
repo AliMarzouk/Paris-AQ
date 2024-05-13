@@ -1,0 +1,27 @@
+#parameter-selector {
+    padding-right: 30px;
+  }
+  .dc-select-menu {
+    width: 100%;
+    padding-right: 10px;
+    height: 35px;
+    font-size: 1.1rem;
+  }
+  .chart-title {
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+  }
+  .centred {
+    text-align: center;
+    padding-inline: 20%;
+  }
+  .page-container {
+    margin-inline: 30px; 
+    margin-block: 30px;
+  }
+  .reset-button {
+    width: 200px;
+    font-size: 1.3rem;
+    padding: 10px;
+  }
