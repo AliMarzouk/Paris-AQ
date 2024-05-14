@@ -54,39 +54,52 @@
               <div id="parameter-selector"></div>
             </tr>
             <tr>
-              <div class="chart-title">Select the date range filter:</div>
-              <div id="series-chart"></div>
+                <div class="chart-title">Select the date range filter:</div>
+                <div class="thumbnail">
+                <div id="series-chart"></div>
+              </div>
             </tr>
             <tr>
+              <div class="thumbnail" style="margin-top: .5rem;">
               <div class="chart-title centred">Evolution of the maximum concentration of the parameter in the air in
                 "µg/m³" by date time</div>
               <div id="series-chart-mini"></div>
+              </div>
             </tr>
           </table>
         </td>
-        <td style="width: 100%;" colspan="2">
+        <td colspan="2">
           <div class="chart-title">Select location filter:</div>
-          <div id='map' style="height: 970px; width: 100%"></div>
+          <div class="thumbnail">
+            <div id='map' style="height: 970px"></div>
+          </div>
         </td>
       </tr>
+      <tr style="height: .5rem;"></tr>
       <tr>
         <td style="text-align: center;">
+          <div class="thumbnail">
           <a href="https://openaq.org/">
             <img style="width: 70%;"
               src="https://user-images.githubusercontent.com/8487728/230648638-35060664-46ef-4d75-9d37-f10dd683b737.png">
           </a>
-        </td>
-        <td>
-          <div class="chart-title centred">
-            Ranking of parameters by maximum concentration in the air
           </div>
-          <div id="top-parameter"></div>
         </td>
         <td>
-          <div class="chart-title centred">
+          <div class="thumbnail">
+            <div class="chart-title centred">
+              Ranking of parameters by maximum concentration in the air
+            </div>
+            <div id="top-parameter"></div>
+          </div>
+        </td>
+        <td>
+          <div class="thumbnail">
+            <div class="chart-title centred">
             Top 10 location by maximum parameter concentration in the air
           </div>
           <div id="top-location"></div>
+          </div>
         </td>
       </tr>
     </table>

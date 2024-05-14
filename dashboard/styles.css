@@ -1,7 +1,3 @@
-#parameter-selector {
-  padding-right: 30px;
-}
-
 .dc-select-menu {
   width: 100%;
   padding-right: 10px;
@@ -10,7 +6,7 @@
 }
 
 .chart-title {
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
   margin-top: 1.5rem;
   font-size: 1.4rem;
 }
@@ -35,4 +31,12 @@
   padding: 1.5rem;
   text-align: center;
   background: rgb(239, 239, 239);
+}
+
+td {
+  padding: 0 15px;
+}
+
+.thumbnail {
+  background: white;
 }
