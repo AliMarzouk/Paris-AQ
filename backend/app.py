@@ -39,14 +39,14 @@ from flask import Flask
 import flask
 from flask_cors import CORS, cross_origin
 app = Flask(__name__)
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+# cors = CORS(app)
+# app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 app = Flask(__name__)
 
 @app.route("/")
-@cross_origin()
+@cross_origin(allow_headers=['Content-Type'], origins=['https://alimarzouk.github.io/'])
 def stream():
     response = flask.Response(results_generator(), mimetype="text/event-stream")
     response.headers.add('Access-Control-Allow-Credentials', 'true')
