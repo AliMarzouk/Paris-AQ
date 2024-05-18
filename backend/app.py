@@ -46,7 +46,7 @@ app = Flask(__name__)
 app = Flask(__name__)
 
 @app.route("/")
-@cross_origin(allow_headers=['Content-Type'], origins=['https://alimarzouk.github.io/'])
+@cross_origin(allow_headers=['Content-Type'], origins=['https://alimarzouk.github.io'])
 def stream():
     response = flask.Response(results_generator(), mimetype="text/event-stream")
     response.headers.add('Access-Control-Allow-Credentials', 'true')
