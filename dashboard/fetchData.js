@@ -25,6 +25,12 @@ evtSource.onmessage = (event) => {
     }
 };
 
+evtSource.onerror = (e) => {
+    document.querySelector('#loader').remove();
+    document.querySelector('#delay-disclaimer').remove();
+    document.querySelector('#error-alert').classList.remove('hidden');
+};
+
 const removeFirstLine = (text) => {
     var lines = text.split('\n');
     lines.splice(0,1);
