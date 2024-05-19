@@ -16,6 +16,7 @@ evtSource.onmessage = (event) => {
         evtSource.close();
         clearAll = renderCharts(csvDataResult);
         document.querySelector('#loader').remove();
+        document.querySelector('#delay-disclaimer').remove();
         document.querySelector('#main-table').classList.remove('hidden');
     } else {
         result = firstResult ? decodeBase64(event.data) : removeFirstLine(decodeBase64(event.data));
