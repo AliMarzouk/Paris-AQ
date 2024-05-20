@@ -41,8 +41,12 @@ td {
   background: white;
 }
 
-.hidden {
+.display-none {
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .loader {

@@ -28,7 +28,7 @@ evtSource.onmessage = (event) => {
 evtSource.onerror = (e) => {
     document.querySelector('#loader').remove();
     document.querySelector('#delay-disclaimer').remove();
-    document.querySelector('#error-alert').classList.remove('hidden');
+    document.querySelector('#error-alert').classList.remove('display-none');
 };
 
 const removeFirstLine = (text) => {
