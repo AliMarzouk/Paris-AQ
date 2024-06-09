@@ -1,21 +1,21 @@
 <h1 align="center">Welcome to PARIS AQ 👋</h1>
 <p>
-  <a href="https://github.com/AliMarzouk/openaq-data-engineer#readme" target="_blank">
+  <a href="https://github.com/AliMarzouk/Paris-AQ#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="https://github.com/AliMarzouk/openaq-data-engineer/graphs/commit-activity" target="_blank">
+  <a href="https://github.com/AliMarzouk/Paris-AQ/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/AliMarzouk/openaq-data-engineer/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/AliMarzouk/Paris-AQ/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/bishkou/password-pwnd" />
   </a>
 </p>
 
 * **Air quality insight monitoring for the paris and Île de France Area**
 
-[![demo ](https://github.com/AliMarzouk/openaq-data-engineer/assets/47494225/b00172c6-3984-40a5-8963-d26ad3c15423)](https://alimarzouk.github.io/openaq-data-engineer/dashboard)
+[![demo ](https://github.com/AliMarzouk/Paris-AQ/assets/47494225/b00172c6-3984-40a5-8963-d26ad3c15423)](https://alimarzouk.github.io/Paris-AQ/dashboard/)
 
-[**Try it**](https://alimarzouk.github.io/openaq-data-engineer/dashboard)
+[**Try it**](https://alimarzouk.github.io/Paris-AQ/dashboard)
 
 [**Full article** ](https://www.linkedin.com/pulse/end-to-end-data-engineering-openaq-api-real-time-using-ali-marzouk-1enxe/?trackingId=M%2F50LUOST3%2BOp3lUDtDZig%3D%3D)
 
@@ -71,13 +71,13 @@ we used the [Leaflet.js](https://leafletjs.com/) library.
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/AliMarzouk/openaq-data-engineer/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/AliMarzouk/Paris-AQ/issues).
 
 ## Show your support
 
-Give a [STAR](https://github.com/AliMarzouk/openaq-data-engineer/) if this project helped you!
+Give a [STAR](https://github.com/AliMarzouk/Paris-AQ/) if this project helped you!
 
 ## 📝 License
 
 * Copyright © 2024 [Ali](https://github.com/AliMarzouk).
-* This project is [MIT](https://github.com/AliMarzouk/openaq-data-engineer/blob/master/LICENSE) licensed.
+* This project is [MIT](https://github.com/AliMarzouk/Paris-AQ/blob/master/LICENSE) licensed.
